@@ -1,6 +1,6 @@
 <template>
 
-    <Navbar></Navbar>
+    <Navbar />
 
     <div class="flex flex-col-reverse xl:flex-row text-center content-center w-full mt-[150px] xl:mt-[180px] section" id="home">
 
@@ -391,19 +391,20 @@
         </div>
 
     </div>
-
+    <SupportChat />
     <Footer />
-
 </template>
 
 <script>
 import Navbar from '../components/Navbar.vue';
 import Footer from '../components/Footer.vue';
+import SupportChat from '../components/SupportChat.vue';
 export default {
     components: {
-        Navbar,
-        Footer
-    },
+    Navbar,
+    Footer,
+    SupportChat
+},
     mounted() {
         AOS.init();
         this.typeWriter();
