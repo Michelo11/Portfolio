@@ -19,6 +19,7 @@ import {
   faPalette,
   faPaperPlane,
   faCircleXmark
+  
 } from "@fortawesome/free-solid-svg-icons";
 import { faUbuntu, faDiscord, faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";

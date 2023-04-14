@@ -156,6 +156,51 @@
               <div class="filled w-[75%]"></div>
             </div>
           </div>
+
+          <div class="mt-5 w-fit">
+            <div class="flex">
+              <span class="font-semibold">VueJS</span>
+              <span class="percent ml-auto text-[#bcbac4]">75%</span>
+            </div>
+
+            <div class="skillbar">
+              <div class="filled w-[75%]"></div>
+            </div>
+          </div>
+
+          <div class="mt-5 w-fit">
+            <div class="flex">
+              <span class="font-semibold">ReactJS</span>
+              <span class="percent ml-auto text-[#bcbac4]">80%</span>
+            </div>
+
+            <div class="skillbar">
+              <div class="filled w-[80%]"></div>
+            </div>
+          </div>
+
+          <div class="mt-5 w-fit">
+            <div class="flex">
+              <span class="font-semibold">React Native</span>
+              <span class="percent ml-auto text-[#bcbac4]">50%</span>
+            </div>
+
+            <div class="skillbar">
+              <div class="filled w-[50%]"></div>
+            </div>
+          </div>
+
+          <div class="mt-5 w-fit">
+            <div class="flex">
+              <span class="font-semibold">Astro</span>
+              <span class="percent ml-auto text-[#bcbac4]">90%</span>
+            </div>
+
+            <div class="skillbar">
+              <div class="filled w-[90%]"></div>
+            </div>
+          </div>
+
         </div>
       </div>
 
