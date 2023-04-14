@@ -140,7 +140,7 @@ export default {
 
       if (!this.secret) {
         await axios
-          .post("http://localhost:8000/new", {
+          .post("http://api.michelemanna.me/new", {
             username: this.username,
           })
           .then((res) => {
@@ -154,7 +154,7 @@ export default {
       }
 
       axios
-        .post("http://localhost:8000/messages?secret=" + this.secret, {
+        .post("http://api.michelemanna.me/messages?secret=" + this.secret, {
           text: this.text,
         })
         .then(() => {
@@ -165,7 +165,7 @@ export default {
     },
     fetchMessages() {
       axios
-        .get("http://localhost:8000/messages?secret=" + this.secret)
+        .get("http://api.michelemanna.me/messages?secret=" + this.secret)
         .then((res) => {
           this.messages = res.data.reverse();
           this.$refs.messages.scrollTop = this.$refs.messages.scrollHeight;
