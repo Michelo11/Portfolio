@@ -33,7 +33,7 @@
         <input
           type="text"
           class="text-white w-full p-2 rounded mt-4 bg-[#1c1c27] border-[#1c1c27]"
-          placeholder="Username*"
+          placeholder="Name*"
           v-model="username"
           required
         />
@@ -69,7 +69,7 @@
           v-for="(message, i) in messages"
           :key="message.id"
           :class="{
-            'bg-[#1c1c27] \ p-2 rounded mt-3': true,
+            'bg-[#1c1c27] p-2 rounded mt-3 w-fit break-words max-w-[80vw]': true,
             'ml-auto mr-3': message.bot,
             'mr-auto ml-3': !message.bot,
           }"
@@ -84,10 +84,14 @@
             type="text"
             class="text-white w-full p-2 rounded bg-[#1c1c27] border-[#1c1c27]"
             placeholder="Type your message..."
-            placeholder:text-white
+            maxlength="200"
             v-model="text"
           />
-          <button type="submit" class="bg-white text-black rounded w-16 h-10">
+          <button
+            type="button"
+            @click="submit()"
+            class="bg-white text-black rounded w-16 h-10"
+          >
             <font-awesome-icon icon="paper-plane"></font-awesome-icon>
           </button>
         </div>
