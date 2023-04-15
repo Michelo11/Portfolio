@@ -1,9 +1,10 @@
 <template>
   <div
     :class="{
-      'fixed rounded-2xl bottom-0 right-0 m-4 bg-[#235bdd] flex flex-col transition-all duration-100 delay-100 ease-in-out': true,
-      'w-16 h-16 close': !open,
-      'w-[20rem] h-[35rem] block open': open,
+      'fixed rounded-2xl bottom-0 right-0 md:m-4 bg-[#235bdd] flex flex-col transition-all duration-100 delay-100 ease-in-out z-50': true,
+      'w-16 h-16 close m-4': !open,
+      'w-screen h-screen md:w-[20rem] md:h-[35rem] block open m-0 md:m-4 rounded-none md:rounded-2xl':
+        open,
       'opacity-0': !loaded,
     }"
     v-on-click-outside="closeChat"
@@ -12,7 +13,7 @@
       <font-awesome-icon v-if="!open" icon="message" class="text-2xl" />
     </button>
     <div
-      v-if="!usernameSent && !secret && open"
+      v-if="!usernameSent && !secret && open && !opening"
       class="w-full h-full flex flex-col justify-center items-center"
     >
       <div class="ml-auto block p-4">
@@ -23,7 +24,7 @@
         />
       </div>
       <form
-        class="w-11/12 h-full flex flex-col m-10 items-center"
+        class="w-11/12 h-full flex flex-col md:m-10 items-center"
         @submit.prevent="setUsername()"
       >
         <p class="text-left text-3xl font-extrabold">
@@ -48,7 +49,7 @@
       </form>
     </div>
     <div
-      v-if="(usernameSent || secret) && open"
+      v-if="(usernameSent || secret) && open && !opening"
       class="w-full h-full flex flex-col"
     >
       <div class="ml-auto block p-4">
@@ -68,7 +69,7 @@
           v-for="(message, i) in messages"
           :key="message.id"
           :class="{
-            'bg-[#1c1c27] w-fit p-2 rounded mt-3': true,
+            'bg-[#1c1c27] \ p-2 rounded mt-3': true,
             'ml-auto mr-3': message.bot,
             'mr-auto ml-3': !message.bot,
           }"
@@ -103,6 +104,7 @@ export default {
   data() {
     return {
       open: false,
+      opening: false,
       loaded: false,
       text: "",
       username: null,
@@ -130,9 +132,17 @@ export default {
   },
   methods: {
     openChat() {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
       this.open = true;
+      this.opening = true;
+      setTimeout(() => {
+        this.opening = false;
+      }, 300);
     },
     closeChat() {
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
       this.open = false;
     },
     async submit() {
@@ -202,6 +212,33 @@ export default {
   100% {
     width: 4rem;
     height: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes open {
+    0% {
+      width: 4rem;
+      height: 4rem;
+    }
+    100% {
+      width: 100vw;
+      height: 100vh;
+    }
+  }
+
+  @keyframes close {
+    0% {
+      width: 100vw;
+      height: 100vh;
+    }
+    100% {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+  .open {
+    margin: 0 !important;
   }
 }
 

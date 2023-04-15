@@ -3,110 +3,117 @@
 @tailwind utilities;
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body,
 html {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 #app {
-    height: 100%;
+  height: 100%;
 }
 
 @keyframes float {
-    0% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-        transform: translatey(0px);
-    }
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
 
-    50% {
-        box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-        transform: translatey(-20px);
-    }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
 
-    100% {
-        box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
-        transform: translatey(0px);
-    }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
 }
 
 .skillbar {
-    width: 20rem;
-    margin: 10px 0;
-    position: relative;
-    display: block;
-    overflow: hidden;
-    height: 5px;
-    background-color: #fff;
-    border-radius: 5px;
+  width: 20rem;
+  margin: 10px 0;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
 .skillbar .title {
-    background-color: #235bdd;
-    height: 30px;
-    width: 85px;
-    text-align: center;
-    left: 0;
-    color: #f0f0f0;
-    border-radius: 5px;
+  background-color: #235bdd;
+  height: 30px;
+  width: 85px;
+  text-align: center;
+  left: 0;
+  color: #f0f0f0;
+  border-radius: 5px;
 }
 
 .skillbar .percent,
 .skillbar .title {
-    padding: 5px;
-    position: absolute;
-    top: 0;
-    z-index: 9
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  z-index: 9;
 }
 
 .skillbar .percent {
-    right: 0;
-    color: #000;
-    font-weight: 700
+  right: 0;
+  color: #000;
+  font-weight: 700;
 }
 
 .skillbar .filled {
-    z-index: 8;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #235bdd;
-    height: 100%;
-    border-radius: 5px;
+  z-index: 8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #235bdd;
+  height: 100%;
+  border-radius: 5px;
 }
 
 .shadow {
-    -webkit-box-shadow: 5px 5px 30px -16px #000000;
-    -moz-box-shadow: 5px 5px 30px -16px #000000;
-    -o-box-shadow: 5px 5px 30px -16px #000000;
-    box-shadow: 5px 5px 30px -16px #000000;
+  -webkit-box-shadow: 5px 5px 30px -16px #000000;
+  -moz-box-shadow: 5px 5px 30px -16px #000000;
+  -o-box-shadow: 5px 5px 30px -16px #000000;
+  box-shadow: 5px 5px 30px -16px #000000;
 }
 
 .white {
-    color: white;
+  color: white;
 }
 
 .active {
-    color: #235bdd !important;
-}
-
-@media (min-width: 768px) {
-    .md\:mt-0 {
-        margin-top: 0 !important;
-    }
-
-    .md\:m-0 {
-        margin: 0 !important;
-    }
-
+  color: #235bdd !important;
 }
 
 .p-4 {
-    padding: 1rem !important;
+  padding: 1rem !important;
 }
 
 .mt-\[50px\] {
-    margin-top: 50px !important;
+  margin-top: 50px !important;
+}
+
+.m-0 {
+  margin: 0 !important;
+}
+
+@media (min-width: 768px) {
+  .md\:mt-0 {
+    margin-top: 0 !important;
+  }
+
+  .md\:m-0 {
+    margin: 0 !important;
+  }
+
+  .md\:m-4 {
+    margin: 1.5rem !important;
+  }
 }
