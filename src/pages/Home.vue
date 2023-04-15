@@ -35,7 +35,7 @@
       draggable="false"
       src="../assets/img/logo.png"
       alt="logo"
-      class="rounded-[200px] mt-[50px] m-auto ml-auto xl:mr-0"
+      class="rounded-[200px] mt-[50px] m-auto ml-auto xl:mr-0 xl:absolute xl:right-[15%] 2xl:relative 2xl:right-0"
       width="300"
       style="animation: float 6s ease-in-out infinite"
     />

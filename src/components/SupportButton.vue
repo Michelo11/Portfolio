@@ -102,6 +102,7 @@
 
 <script>
 import axios from "axios";
+import { io } from "socket.io-client";
 import { vOnClickOutside } from "@vueuse/components";
 
 export default {
@@ -115,6 +116,7 @@ export default {
       usernameSent: false,
       secret: null,
       messages: [],
+      server: null,
     };
   },
   directives: {
@@ -126,12 +128,13 @@ export default {
     }, 300);
 
     this.secret = localStorage.getItem("secret");
+    this.server = io("https://api.michelemanna.me");
+    this.server.on("message", (message) => {
+      this.messages.push(message);
+    });
     if (this.secret) {
       this.fetchMessages();
-
-      setInterval(() => {
-        this.fetchMessages();
-      }, 1000);
+      this.server.emit("join", this.secret);
     }
   },
   methods: {
@@ -161,9 +164,7 @@ export default {
             this.secret = res.data.secret;
             localStorage.setItem("secret", this.secret);
             this.fetchMessages();
-            setInterval(() => {
-              this.fetchMessages();
-            }, 1000);
+            this.server.emit("join", this.secret);
           });
       }
 
