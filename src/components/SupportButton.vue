@@ -52,7 +52,7 @@
       v-if="(usernameSent || secret) && open && !opening"
       class="w-full h-full flex flex-col"
     >
-      <div class="ml-auto block p-4">
+      <div class="ml-auto block p-4 pt-20 md:pt-4">
         <font-awesome-icon
           icon="circle-xmark"
           class="text-4xl cursor-pointer"
