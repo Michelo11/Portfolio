@@ -117,3 +117,9 @@ html {
     margin: 1.5rem !important;
   }
 }
+
+@media (max-width: 768px) {
+  .pt-20 {
+    padding-top: 5rem !important;
+  }
+}
