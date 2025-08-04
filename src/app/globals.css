@@ -113,9 +113,15 @@
 }
 
 @layer base {
+  body {
+    background-color: #131D2F;
+    color: white;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
