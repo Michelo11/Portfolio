@@ -26,15 +26,15 @@ export default function About() {
                     {"{"}
                   </div>
                   <div className="ml-4 text-green-400">
-                    name: <span className="text-yellow-400">'Michele'</span>,
+                    name: <span className="text-yellow-400">&apos;Michele&apos;</span>,
                   </div>
                   <div className="ml-4 text-green-400">
-                    location: <span className="text-yellow-400">'Italy'</span>,
+                    location: <span className="text-yellow-400">&apos;Italy&apos;</span>,
                   </div>
                   <div className="ml-4 text-green-400">
                     skills:{" "}
                     <span className="text-white">
-                      ['fullstack', 'bots', 'plugins']
+                      [&apos;fullstack&apos;, &apos;bots&apos;, &apos;plugins&apos;]
                     </span>
                   </div>
                   <div className="text-blue-400">{"}"}</div>
@@ -45,7 +45,7 @@ export default function About() {
 
           <div>
             <p className="text-lg text-gray-300 leading-relaxed mb-6">
-              I'm a developer and system administrator from Italy. I have a
+              I&apos;m a developer and system administrator from Italy. I have a
               passion for creating fullstack websites, Discord bots, plugins,
               and managing systems. I love to learn new technologies and
               improve my skills every day.
