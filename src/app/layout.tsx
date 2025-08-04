@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
@@ -15,7 +15,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Michele | Full Stack Developer | Discord Bot & Plugin Expert",
-  description: "Portfolio of Michele, a Full Stack Developer specializing in modern websites, Discord bots, plugins, and Linux system administration. Explore my projects and skills.",
+  description:
+    "Portfolio of Michele, a Full Stack Developer specializing in modern websites, Discord bots, plugins, and Linux system administration. Explore my projects and skills.",
   keywords: [
     "full stack developer",
     "web developer portfolio",
@@ -48,6 +49,14 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  initialScale: 1,
+  themeColor: "#0F192C",
+  width: "device-width",
+  colorScheme: "dark",
+  userScalable: false,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -62,12 +71,22 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Person",
-              "name": "Michele",
-              "url": "https://michelemanna.me",
-              "jobTitle": "Full Stack Developer",
-              "knowsAbout": ["Web Development", "Discord Bot Development", "Plugin Development", "Linux System Administration", "Frontend Development", "Backend Development"],
-              "sameAs": ["https://github.com/Michelo11", "https://discord.com/users/573539095452844052"]
-            })
+              name: "Michele",
+              url: "https://michelemanna.me",
+              jobTitle: "Full Stack Developer",
+              knowsAbout: [
+                "Web Development",
+                "Discord Bot Development",
+                "Plugin Development",
+                "Linux System Administration",
+                "Frontend Development",
+                "Backend Development",
+              ],
+              sameAs: [
+                "https://github.com/Michelo11",
+                "https://discord.com/users/573539095452844052",
+              ],
+            }),
           }}
         />
       </head>
