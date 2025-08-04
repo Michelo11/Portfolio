@@ -5,10 +5,17 @@ const nextConfig: NextConfig = {
     formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 60 * 60 * 24 * 30,
   },
-  swcMinify: true,
   compress: true,
   reactStrictMode: true,
-  trailingSlash: true,
+  poweredByHeader: false,
+  productionBrowserSourceMaps: false,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === "production",
+  },
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ["lucide-react"],
+  },
 };
 
 export default nextConfig;

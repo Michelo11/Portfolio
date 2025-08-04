@@ -17,10 +17,10 @@ export default function Contact() {
           <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700/50 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105">
             <CardContent className="p-6 text-center">
               <div className="p-4 rounded-lg bg-red-600/20 w-fit mx-auto mb-4">
-                <Mail size={32} className="text-red-400" />
+                <Mail size={32} className="text-red-400" aria-hidden="true" />
               </div>
               <h3 className="text-lg font-semibold mb-2 text-white">Email</h3>
-              <Link href="mailto:hello@michelemanna.me">
+              <Link href="mailto:hello@michelemanna.me" aria-label="Send an email to Michele">
                 <p className="text-blue-400">hello@michelemanna.me</p>
               </Link>
             </CardContent>
@@ -29,12 +29,12 @@ export default function Contact() {
           <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700/50 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105">
             <CardContent className="p-6 text-center">
               <div className="p-4 rounded-lg bg-indigo-600/20 w-fit mx-auto mb-4">
-                <MessageCircle size={32} className="text-indigo-400" />
+                <MessageCircle size={32} className="text-indigo-400" aria-hidden="true" />
               </div>
               <h3 className="text-lg font-semibold mb-2 text-white">
                 Discord
               </h3>
-              <Link href="https://discord.com/users/573539095452844052">
+              <Link href="https://discord.com/users/573539095452844052" target="_blank" rel="noopener noreferrer" aria-label="Contact Michele on Discord">
                 <p className="text-blue-400">michele0001</p>
               </Link>
             </CardContent>
@@ -43,12 +43,12 @@ export default function Contact() {
           <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700/50 hover:bg-slate-800/70 transition-all duration-300 transform hover:scale-105">
             <CardContent className="p-6 text-center">
               <div className="p-4 rounded-lg bg-gray-600/20 w-fit mx-auto mb-4">
-                <Github size={32} className="text-gray-400" />
+                <Github size={32} className="text-gray-400" aria-hidden="true" />
               </div>
               <h3 className="text-lg font-semibold mb-2 text-white">
                 GitHub
               </h3>
-              <Link href="https://github.com/Michelo11">
+              <Link href="https://github.com/Michelo11" target="_blank" rel="noopener noreferrer" aria-label="Visit Michele's GitHub profile">
                 <p className="text-blue-400">Michelo11</p>
               </Link>
             </CardContent>

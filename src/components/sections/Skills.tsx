@@ -44,10 +44,10 @@ export default function Skills() {
                 className="flex items-center gap-4 p-4 rounded-lg bg-slate-800/50 backdrop-blur-sm border border-slate-700/50"
               >
                 <div className="p-3 rounded-lg bg-blue-600/20">
-                  <role.icon size={24} className="text-blue-400" />
+                  <role.icon size={24} className="text-blue-400" aria-hidden="true" />
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-semibold text-white">{role.title}</h4>
+                  <h3 className="font-semibold text-white">{role.title}</h3>
                   <p className="text-gray-400 text-sm">{role.years}</p>
                 </div>
               </div>

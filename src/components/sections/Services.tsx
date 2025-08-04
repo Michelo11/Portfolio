@@ -47,7 +47,7 @@ export default function Services() {
             >
               <CardContent className="p-6 text-center">
                 <div className="p-4 rounded-lg bg-blue-600/20 w-fit mx-auto mb-4">
-                  <service.icon size={32} className="text-blue-400" />
+                  <service.icon size={32} className="text-blue-400" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-white">
                   {service.title}

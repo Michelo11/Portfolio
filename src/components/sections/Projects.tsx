@@ -102,7 +102,7 @@ export default function Projects() {
                     className="border-blue-500 text-blue-400 hover:bg-blue-600 hover:text-white bg-transparent"
                     asChild
                   >
-                    <Link href={project.github} target="_blank">
+                    <Link href={project.github} target="_blank" rel="noopener noreferrer" aria-label={`View source code of ${project.title}`}>
                       Code
                     </Link>
                   </Button>
@@ -111,8 +111,9 @@ export default function Projects() {
                       variant="outline"
                       size="sm"
                       className="border-blue-500 text-blue-400 hover:bg-blue-600 hover:text-white bg-transparent"
+                      asChild
                     >
-                      <Link href={project.demo} target="_blank">
+                      <Link href={project.demo} target="_blank" rel="noopener noreferrer" aria-label={`Visualizza demo di ${project.title}`}>
                         Demo
                       </Link>
                     </Button>

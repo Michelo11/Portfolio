@@ -23,7 +23,7 @@ export default function Navbar({ activeSection, scrollToSection }: NavbarProps) 
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className={`text-sm font-medium transition-colors hover:text-blue-400 ${
+                  className={`text-sm font-medium transition-colors hover:text-blue-400 px-3 py-2 min-h-[44px] min-w-[44px] ${
                     activeSection === item.toLowerCase()
                       ? "text-blue-400"
                       : "text-gray-300"
@@ -39,6 +39,8 @@ export default function Navbar({ activeSection, scrollToSection }: NavbarProps) 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-300 hover:text-white"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -54,7 +56,7 @@ export default function Navbar({ activeSection, scrollToSection }: NavbarProps) 
                 <button
                   key={item}
                   onClick={() => scrollToSection(item.toLowerCase())}
-                  className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-blue-400 transition-colors"
+                  className="block px-3 py-3 text-base font-medium text-gray-300 hover:text-blue-400 transition-colors w-full min-h-[44px]"
                 >
                   {item.toUpperCase()}
                 </button>
