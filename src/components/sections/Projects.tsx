@@ -1,40 +1,65 @@
 "use client";
 
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Github, ExternalLink } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
 
 export default function Projects() {
   const projects = [
     {
-      title: "E-Commerce Platform",
+      title: "Dashy",
       description:
-        "Full-stack e-commerce solution built with Next.js and Stripe",
-      tech: ["Next.js", "TypeScript", "Stripe", "Tailwind"],
-      github: "#",
-      demo: "#",
+        "A customizable Discord bot designed to enhance server functionality and user experience.",
+      tech: ["Next.js", "Discord API", "PostgreSQL", "Hono"],
+      github: "https://github.com/Michelo11/Dashy",
+      demo: "https://dashy.michelemanna.me",
+      showDemo: true,
     },
     {
-      title: "Discord Bot Framework",
-      description: "Modular Discord bot with advanced command handling",
-      tech: ["Node.js", "Discord.js", "MongoDB", "Docker"],
-      github: "#",
+      title: "Phpit",
+      description:
+        "A simple and dynamic platform for sharing short messages, images, in real time, with an intuitive interface.",
+      tech: ["Laravel", "React", "PostgreSQL", "Tailwind CSS"],
+      github: "https://github.com/Michelo11/Phpit",
       demo: "#",
+      showDemo: false,
     },
     {
-      title: "Plugin Management System",
-      description: "WordPress plugin for advanced content management",
-      tech: ["PHP", "JavaScript", "MySQL", "WordPress"],
-      github: "#",
+      title: "Drive",
+      description:
+        " A simple drive app for storing and managing files, with a user-friendly interface.",
+      tech: ["Next.js", "PostgreSQL", "Tailwind CSS"],
+      github: "https://github.com/Michelo11/Drive",
       demo: "#",
+      showDemo: false,
     },
     {
-      title: "Server Monitoring Dashboard",
-      description: "Real-time server monitoring with custom alerts",
-      tech: ["Vue.js", "Node.js", "Socket.io", "Linux"],
-      github: "#",
+      title: "Phone Plugin",
+      description:
+        "A minecraft plugin for receiving phone calls and sending messages with a minecraft phone.",
+      tech: ["Java", "Spigot", "Maven"],
+      github: "https://github.com/Michelo11/Phone",
+      demo: "https://www.spigotmc.org/resources/phone.115808",
+      showDemo: true,
+    },
+    {
+      title: "Wallet Plugin",
+      description:
+        "A minecraft plugin that allows players to manage their in-game currency, transactions and documents.",
+      tech: ["Java", "Spigot", "Maven"],
+      github: "https://github.com/Michelo11/Wallet",
+      demo: "https://www.spigotmc.org/resources/wallet.120318/",
+      showDemo: true,
+    },
+    {
+      title: "Kingdoms Plugin",
+      description:
+        "A minecraft plugin that adds clans, territorial wars, and an economy system to your server.",
+      tech: ["Java", "Spigot", "Maven"],
+      github: "https://github.com/Michelo11/Kingdoms",
       demo: "#",
+      showDemo: false,
     },
   ];
 
@@ -75,18 +100,23 @@ export default function Projects() {
                     variant="outline"
                     size="sm"
                     className="border-blue-500 text-blue-400 hover:bg-blue-600 hover:text-white bg-transparent"
+                    asChild
                   >
-                    <Github size={16} className="mr-2" />
-                    Code
+                    <Link href={project.github} target="_blank">
+                      Code
+                    </Link>
                   </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="border-blue-500 text-blue-400 hover:bg-blue-600 hover:text-white bg-transparent"
-                  >
-                    <ExternalLink size={16} className="mr-2" />
-                    Demo
-                  </Button>
+                  {project.showDemo && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-blue-500 text-blue-400 hover:bg-blue-600 hover:text-white bg-transparent"
+                    >
+                      <Link href={project.demo} target="_blank">
+                        Demo
+                      </Link>
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>

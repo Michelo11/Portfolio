@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Typewriter from "typewriter-effect";
 
 type HeroProps = {
   scrollToSection: (sectionId: string) => void;
@@ -34,19 +35,32 @@ export default function Hero({ scrollToSection }: HeroProps) {
         </h1>
 
         <h2 className="text-2xl md:text-3xl font-semibold text-blue-400 mb-6">
-          FULLSTACK DEVELOPER
+          <Typewriter
+            options={{
+              strings: [
+                "FULL STACK WEB DEVELOPER",
+                "DISCORD BOT DEVELOPER",
+                "PLUGIN DEVELOPER",
+                "LINUX SYSTEM ADMINISTRATOR",
+              ],
+              autoStart: true,
+              loop: true,
+            }}
+          />
         </h2>
 
         <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
-          A student from Italy who loves developing fullstack websites, bots,
-          plugins and administrating systems.
+          Full Stack Developer from Italy, specialized in creating modern
+          websites, functional Discord bots and other platforms, custom plugins,
+          and advanced Linux system administration. With both frontend and
+          backend skills, I offer complete solutions for all your digital needs.
         </p>
 
         <Button
           onClick={() => scrollToSection("about")}
           className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
         >
-          LEARN MORE
+          EXPLORE MY WORK
         </Button>
       </div>
     </section>

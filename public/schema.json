@@ -1,0 +1,47 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Michele",
+  "url": "https://michelemanna.me",
+  "jobTitle": "Full Stack Developer",
+  "knowsAbout": ["Web Development", "Discord Bot Development", "Plugin Development", "Linux System Administration", "Frontend Development", "Backend Development"],
+  "sameAs": ["https://github.com/Michelo11", "https://discord.com/users/573539095452844052"],
+  "workExample": [
+    {
+      "@type": "SoftwareApplication",
+      "name": "Dashy",
+      "applicationCategory": "Discord Bot",
+      "operatingSystem": "Web",
+      "description": "A customizable Discord bot designed to enhance server functionality and user experience."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "name": "Kingdoms Plugin",
+      "applicationCategory": "Minecraft Plugin",
+      "operatingSystem": "Minecraft Servers",
+      "description": "A minecraft plugin that adds clans, territorial wars, and an economy system to your server."
+    }
+  ],
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "name": "Web Development",
+      "description": "Creating responsive fullstack websites with React, Tailwind, and modern frameworks."
+    },
+    {
+      "@type": "Offer",
+      "name": "Bot Development",
+      "description": "Creating Discord bots with custom commands and features."
+    },
+    {
+      "@type": "Offer",
+      "name": "System Administration",
+      "description": "Managing servers, setup and maintain systems."
+    },
+    {
+      "@type": "Offer",
+      "name": "Plugin Development",
+      "description": "Creating plugins for various services, with custom commands and features."
+    }
+  ]
+}

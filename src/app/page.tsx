@@ -61,7 +61,7 @@ export default function Portfolio() {
       <About />
       <Skills />
       <Services />
-      {/* <Projects /> */}
+      <Projects />
       <CTA scrollToSection={scrollToSection} />
       <Contact />
       <Footer />

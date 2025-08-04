@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,16 +14,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Michele's Portfolio",
-  description: "My personal porfolio website showcasing my skills.",
+  title: "Michele | Full Stack Developer | Discord Bot & Plugin Expert",
+  description: "Portfolio of Michele, a Full Stack Developer specializing in modern websites, Discord bots, plugins, and Linux system administration. Explore my projects and skills.",
   keywords: [
-    "portfolio",
-    "developer",
-    "fullstack",
-    "bots",
-    "plugins",
-    "web development",
+    "full stack developer",
+    "web developer portfolio",
+    "discord bot developer",
+    "plugin developer",
+    "custom bot development",
     "system administration",
+    "frontend developer",
+    "backend developer",
+    "modern web development",
+    "michele developer",
   ],
   authors: [{ name: "Michele" }],
   creator: "Michele",
@@ -35,7 +39,7 @@ export const metadata: Metadata = {
       {
         url: "https://michelemanna.me/logo.png",
         width: 1200,
-        height: 630,
+        height: 1200,
         alt: "Michele's Portfolio",
       },
     ],
@@ -51,10 +55,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": "Michele",
+              "url": "https://michelemanna.me",
+              "jobTitle": "Full Stack Developer",
+              "knowsAbout": ["Web Development", "Discord Bot Development", "Plugin Development", "Linux System Administration", "Frontend Development", "Backend Development"],
+              "sameAs": ["https://github.com/Michelo11", "https://discord.com/users/573539095452844052"]
+            })
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
