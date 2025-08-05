@@ -19,7 +19,7 @@ export default function Hero({ scrollToSection }: HeroProps) {
           <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 p-1">
             <div className="w-full h-full rounded-full bg-slate-800 flex items-center justify-center">
               <Image
-                src="/logo.png"
+                src="/michelemanna-logo.png"
                 alt="Profile"
                 width={128}
                 height={128}
