@@ -40,7 +40,7 @@ export const metadata: Metadata = {
       {
         url: "https://michelemanna.me/michelemanna-logo.png",
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: "Michele's Portfolio",
       },
     ],
