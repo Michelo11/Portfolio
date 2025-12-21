@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     siteName: "Michele's Portfolio",
     images: [
       {
-        url: "https://michelemanna.me/logo.png",
+        url: "https://michelemanna.me/michelemanna-logo.png",
         width: 1200,
-        height: 1200,
+        height: 630,
         alt: "Michele's Portfolio",
       },
     ],
