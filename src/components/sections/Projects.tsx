@@ -19,7 +19,7 @@ export default function Projects() {
     {
       title: "Phpit",
       description:
-        "A simple and dynamic platform for sharing short messages, images, in real time, with an intuitive interface.",
+        "A simple and dynamic platform for sharing short messages, images, in real time.",
       tech: ["Laravel", "React", "PostgreSQL", "Tailwind CSS"],
       github: "https://github.com/Michelo11/Phpit",
       demo: "#",
@@ -28,9 +28,18 @@ export default function Projects() {
     {
       title: "Drive",
       description:
-        " A simple drive app for storing and managing files, with a user-friendly interface.",
+        "A simple drive app for storing and managing files.",
       tech: ["Next.js", "PostgreSQL", "Tailwind CSS"],
       github: "https://github.com/Michelo11/Drive",
+      demo: "#",
+      showDemo: false,
+    },
+    {
+      title: "Whatsapp",
+      description:
+        "A whatsapp clone using websocket and RSA encryption.",
+      tech: ["React Native", "Hono", "PostgreSQL", "WebSocket"],
+      github: "https://github.com/Michelo11/Whatsapp",
       demo: "#",
       showDemo: false,
     },
